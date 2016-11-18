@@ -25,7 +25,7 @@ typedef struct bar_chart {
     int column_count;
 } bar_chart_t;
 
-void drawChart(bar_chart_t* chart, int x, int y, int height){
+void draw_chart(bar_chart_t* chart, int x, int y, int height){
    int max_value = 0; 
    for (int i = 0; i < chart->column_count; i++){
        column_t* col = chart->columns[i];
@@ -62,6 +62,7 @@ void drawChart(bar_chart_t* chart, int x, int y, int height){
        column_t* col = chart->columns[i];
        setColour(i % 10);// trying to figure out how to get full shaded rectangles
        drawRect(x + current_column_offset, y - (int)(scale_ratio * col->value) - 1, col->width, (int)(scale_ratio * col->value));
+       fillRect(x + current_column_offset, y - (int)(scale_ratio * col->value) - 1, col->width, (int)(scale_ratio * col->value));
        // the -1 is to give a space to show the x-axis line instead of drawing over it
        setColour(black);
        drawString(col->name, x+current_column_offset + 5, y + 15);
@@ -78,7 +79,7 @@ column_t* new_column(char* name, int width, int value){
     return c;
 }
 
-bar_chart_t* new_bar_char(int y_axis_increment, column_t** columns, int column_count){
+bar_chart_t* new_bar_chart(int y_axis_increment, column_t** columns, int column_count){
     bar_chart_t* chart = malloc(sizeof(bar_chart_t));
     chart->column_count = column_count;
     chart->columns = columns;
@@ -97,6 +98,6 @@ int main(void){
     cols[2] = c3;
     cols[3] = c4;
 
-    bar_chart_t* chart = new_bar_char(20, cols, 4);
-    drawChart(chart, 50, 200, 100);
+    bar_chart_t* chart = new_bar_chart(20, cols, 4);
+    draw_chart(chart, 50, 200, 100);
 }

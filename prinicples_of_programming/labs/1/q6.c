@@ -16,7 +16,7 @@ void drawCircumscribedSquare(int x, int y, int radius){
      * => a^2 = 2 r^2
      * => a = sqrt(2) r
      */
-    int square_width = M_SQRT2 * radius;
+    int square_width = sqrt(2) * radius;
     drawArc(x,y,2*radius,2*radius,0,360);
     int square_center_x = x + radius;
     int square_center_y = y + radius;

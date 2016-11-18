@@ -9,6 +9,7 @@
 
 #include "graphics.h"
 
+#define M_PI 3.14159265
 
 void drawRegularNGon(int x, int y, int radius, int sides, float rotation){
     /* 
