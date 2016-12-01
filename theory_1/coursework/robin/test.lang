@@ -1,0 +1,7 @@
+series <- 0
+
+for k <- 0...100 (
+    term <- (-3^(0-k)) / (2*k + 1)
+    series << series + term
+)
+-> series * (12^(1/2))
