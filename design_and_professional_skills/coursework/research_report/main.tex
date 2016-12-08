@@ -1,0 +1,108 @@
+\documentclass{article}
+
+\usepackage{helvet}
+\usepackage[a4paper,margin=1in]{geometry}
+
+\renewcommand{\familydefault}{\sfdefault}
+\author{Amartya Vadlamani}
+\title{Using Machine Learning and Natural Language Processing to Automatically Diagnose Medical Conditions}
+\date{}
+\begin{document}
+\maketitle
+\pagenumbering{gobble}
+
+\paragraph {}
+With an growing and aging population, getting fast access to medical advice is
+vital to ensuring a good quality of life but ever growing pressures on the NHS
+mean that it can take between 3 and 18 weeks to see a
+specialist\cite{referaltime}, and up to four hours to go into a walk-in clinic
+to see a nurse if you ever get seen at all\cite{appointmentwait}. Online
+symptom checkers aren't that useful either as according to a BMJ study there is
+only a 57\% chance that correct diagnosis will be in the top 20
+options\cite{webMD}. The bottleneck in all of these cases is the lack of
+doctors who can interview patients and produce a diagnosis quickly and reliably.
+
+\paragraph{}
+Now if you break up the tasks doctors do while in a diagnostic appointment;
+process human input; analysis that input to find relations and patterns; and
+produce a given treatment plan; the task seems ripe for automation by
+computers. There are two fields in Computer Science, Machine Learning and
+Natural Language Processing, that started in the 50s but only recently had
+enough computing power to become applicable to many different tasks. Machine
+Learning lets machines learn from structured datasets, i.e.  datasets in a
+machine readable format, and perform tasks that they could never be manually
+programmed to do.\cite{whatiswatson} While this is all well and good, where
+would you find a structured dataset large enough to teach a computer the whole
+of medicine? This is where Natural Language Processing comes in. This subfield
+of computational linguistics is based around finding methods that computers can
+turn the unstructured datasets that people produce when they write and into
+structured datasets that a computer can understand.\cite{whatiswatson} Put
+these two fields together and feed it from a medical database of thousands of
+research papers and you get a digital doctor that scales with the number of
+computers that you can attach it to rather than the number of people that have
+graduated from medical school in the last few years and can always be
+constantly learning and applying the latest research in ways that humans just
+cannot. That`s the theory at least.
+
+\paragraph{}
+In practice, there are a few teething issues but the technology is now mostly
+here, in the form of machine learning systems like IBM's
+Watson\cite{whatiswatson}. A question answering computer program that is able
+to answer questions in plain English. A point to note is that AI systems like
+Watson do not have to be perfect just better than people and in some instances
+they already are. Watson, for example, already diagnoses lung cancer with 90\%
+accuracy as opposed to 50\% accuracy by human doctors and has made a leukemia
+diagnosis that had stumped a panel of human doctors for months.
+\cite{watsonbeatshumans}\cite{iswiredavalidcite}. 
+
+\paragraph{}
+Now while these figures show quite a lot of promise there still a long way
+before a future of fast and easy access to digital doctors. But the technology
+is currently expensive as the algorithms need a lot of computation power to run
+and this means that large data centers need to either be set up or rented and
+while strides are being made to make these systems more efficient they still
+need large computer arrays to serve the ever growing population that was the
+catalyst for their creation. As well as this more data needs to be gathered
+about where the inherent biases are in this system as well as reducing the
+number of times that it makes false predictions all of this raising concerns
+about data security and privacy. But all this could mean the earlier diagnosis and
+treatment of a whole range of time sensitive diseases like cancer leading to
+earlier treatment and higher survival rates.
+
+\begin{thebibliography}{6}
+    \bibitem{referaltime} 
+        NHS UK. Guide to NHS waiting times in England .
+        http://www.nhs.uk/NHSEngland/appointment-booking/Pages/nhs-waiting-times.aspx
+        (accessed 05 December 2016).
+    \bibitem{appointmentwait}
+        Mark Tran. GP appointment waiting times crisis revealed in Labour
+        research.
+        https://www.theguardian.com/society/2016/apr/17/gp-appointment-waiting-times-crisis-revealed-in-labour-research
+        (accessed 05 December 2016).
+    \bibitem{clinicwaittime}
+        Central London Community Healthcare. NHS Walk-in Centres.
+        http://www.clch.nhs.uk/services/walk-in-and-urgent-care-centres.aspx
+        (accessed 05 December 2016).
+    \bibitem{webMD}
+        Hannah L Semigran, Jeffrey A Linder, Courtney Gidengil, Ateev Mehrotra.
+        Evaluation of symptom checkers for self diagnosis and triage: audit
+        study. BMJ (British Medical Journal) 2015;
+        http://www.bmj.com/content/351/bmj.h3480 (accessed 05 December 2016).
+    \bibitem{whatiswatson}
+        David Ferrucci ⁎, ferrucci@us.ibm.com, Anthony Levas, Sugato Bagchi,
+        David Gondek, Erik T. Mueller. Watson: Beyond Jeopardy!. Science Direct
+        2012;
+        http://www.sciencedirect.com/science/article/pii/S0004370212000872
+        (accessed 05 December 2016).
+    \bibitem{watsonbeatshumans}
+        Alfred Ng. IBM’s Watson gives proper diagnosis for Japanese leukemia
+        patient after doctors were stumped for months .
+        http://www.nydailynews.com/news/world/ibm-watson-proper-diagnosis-doctors-stumped-article-1.2741857
+        (accessed 05 December 2016).
+    \bibitem{iswiredavalidcite}
+        Ian Steadman. IBM's Watson is better at diagnosing cancer than human
+        doctors. http://www.wired.co.uk/article/ibm-watson-medical-doctor
+        (accessed 05 December 2016).
+\end{thebibliography}
+
+\end{document}

@@ -8,7 +8,7 @@ const int Fsize=50;
 int no_edges;
 int no_nodes;
 int i;
-const int cases=10;
+const int cases=15;
 
 
 typedef struct parser{
