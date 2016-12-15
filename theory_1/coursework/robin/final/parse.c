@@ -412,7 +412,7 @@ int main(void){
     negated_children[0] = ignore(literal('-'));
     parser* negated = named("Negated", then(negated_children, 2));
     
-    parser** binary_connective_children = malloc(4*(sizeof(parser)));
+    parser** binary_connective_children = malloc(5*(sizeof(parser)));
     binary_connective_children[0] = ignore(literal('('));
     binary_connective_children[2] = bin_con;
     binary_connective_children[4] = ignore(literal(')'));
